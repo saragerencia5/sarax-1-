@@ -1,39 +1,182 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SARAX</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a [SARAX]</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Vendedores</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="confirmacion-edad">
-            <p>Debes confirmar que eres mayor de 18 años para continuar.</p>
-            <button onclick="confirmarEdad()">Soy mayor de 18 años</button>
-        </section>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo de Vendedores</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section id="contenido-principal" style="display: none;">
-            <h2>Explora nuestro contenido exclusivo</h2>
-            <p>Únete a nuestra plataforma y disfruta de los servicios.</p>
-        </section>
-    </main>
+<section id="bienvenida">
+    <h1>Bienvenido a SARAX</h1>
+    <p>Conecta con los mejores vendedores para experiencias únicas de chats y videollamadas.</p>
+</section>
+<section id="catalogo">
+    <h2>Catálogo de Vendedores</h2>
+    <div class="vendedores">
+        <div class="vendedor">
+            <h3>Vendedor 1</h3>
+            <p>Descripción breve del vendedor 1. Aquí puedes agregar más detalles sobre los servicios ofrecidos.</p>
+            <button>Iniciar Chat</button>
+            <button>Iniciar Videollamada</button>
+        </div>
+        <div class="vendedor">
+            <h3>Vendedor 2</h3>
+            <p>Descripción breve del vendedor 2. Aquí puedes agregar más detalles sobre los servicios ofrecidos.</p>
+            <button>Iniciar Chat</button>
+            <button>Iniciar Videollamada</button>
+        </div>
+    </div>
+</section>
+<!-- Pantalla de Pago -->
+<section id="pago">
+    <h2>Detalles de Pago</h2>
+    <form id="form-pago">
+        <label for="tiempo">Duración de la llamada (en minutos):</label>
+        <input type="number" id="tiempo" name="tiempo" min="1" max="15" required>
 
-    <footer>
-        <p>&copy; 2025 SARAX. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+        <button type="submit">Generar Código de Pago</button>
+    </form>
+
+    <div id="detalles-pago" style="display:none;">
+        <h3>Resumen del Pago</h3>
+        <p id="costo"></p>
+        <p id="codigo-pago"></p>
+        <p id="cuenta-banco"></p>
+    </div>
+</section>
+
+<!-- Formulario de Solicitud de Pago del Vendedor -->
+<section id="solicitud-pago">
+    <h2>Solicitud de Pago</h2>
+    <form id="form-solicitud">
+        <label for="monto">Monto Solicitado (R$):</label>
+        <input type="number" id="monto" name="monto" min="1" required>
+
+        <label for="cuenta-banco">Cuenta Bancaria:</label>
+        <input type="text" id="cuenta-banco" name="cuenta-banco" required>
+
+        <button type="submit">Solicitar Pago</button>
+    </form>
+</section>
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Para más información, contáctanos por correo electrónico.</p>
+    <p>Email: contacto@sarax.com</p>
+</section>
+<footer>
+    <p>&copy; 2025 SARAX. Todos los derechos reservados.</p>
+</footer>
+<section id="panel-admin" style="display:none;">
+    <h2>Panel de Administrador</h2>
+    <h3>Pagos Realizados</h3>
+    <ul id="lista-pagos">
+        <!-- Los pagos generados aparecerán aquí -->
+    </ul>
+</section><section id="panel-admin" style="display:none;">
+    <h2>Panel de Administrador</h2>
+    <h3>Pagos Realizados</h3>
+    <ul id="lista-pagos">
+        <!-- Los pagos generados aparecerán aquí -->
+    </ul>
+</section>
+<section id="registro-vendedor">
+    <h2>Registro de Vendedor</h2>
+    <form id="form-registro" enctype="multipart/form-data">
+        <label for="nombre">Nombre del Vendedor:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="descripcion">Descripción del Vendedor:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+        <label for="foto">Foto del Vendedor:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+
+        <label for="video">Video de Presentación:</label>
+        <input type="file" id="video" name="video" accept="video/*" required>
+
+        <button type="submit">Registrar Vendedor</button>
+    </form>
+</section>
+<section id="metodo-pago">
+    <form>
+        <div class="form-group">
+            <label for="qr-3min">Código QR para 3 minutos (R$ 5)</label>
+            <input type="file" id="qr-3min" name="qr-3min" accept="image/png, image/jpeg" required>
+        </div>
+
+        <div class="form-group">
+            <label for="qr-5min">Código QR para 5 minutos (R$ 8)</label>
+            <input type="file" id="qr-5min" name="qr-5min" accept="image/png, image/jpeg" required>
+        </div>
+
+        <div class="form-group">
+            <label for="qr-10min">Código QR para 10 minutos (R$ 30)</label>
+            <input type="file" id="qr-10min" name="qr-10min" accept="image/png, image/jpeg" required>
+        </div>
+
+        <div class="form-group">
+            <label for="qr-15min">Código QR para 15 minutos (R$ 45)</label>
+            <input type="file" id="qr-15min" name="qr-15min" accept="image/png, image/jpeg" required>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Subir Códigos QR</button>
+        </div>
+    </form>
+</section>
+<!-- Ventana de chat (estará oculta hasta iniciar la conversación) -->
+<div id="chatWindow" class="chat-window" style="display:none;">
+    <div class="chat-header">
+        <span id="chatTitle">Chat con Vendedor</span>
+        <button onclick="cerrarChat()">Cerrar</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <textarea id="chatInput" class="chat-input" placeholder="Escribe un mensaje..."></textarea>
+    <button onclick="enviarMensaje()">Enviar</button>
+</div>
+<!-- Botón para iniciar videollamada -->
+<button onclick="iniciarVideollamada('Vendedor 1')">Iniciar Videollamada</button>
+
+<!-- Contenedor de la videollamada -->
+<div id="videollamada" style="display:none;">
+    <h3>Videollamada con <span id="nombreVendedor">Vendedor</span></h3>
+    <video id="videoCliente" autoplay></video>
+    <video id="videoVendedor" autoplay></video>
+    <button onclick="terminarVideollamada()">Terminar Videollamada</button>
+</div><!-- Pantalla de Pago -->
+<section id="pago">
+    <h2>Detalles de Pago</h2>
+    <form id="form-pago">
+        <label for="tiempo">Duración de la llamada (en minutos):</label>
+        <input type="number" id="tiempo" name="tiempo" min="1" max="15" required>
+        <button type="submit">Generar Código de Pago</button>
+    </form>
+
+    <div id="detalles-pago" style="display:none;">
+        <h3>Resumen del Pago</h3>
+        <p id="costo"></p>
+        <p id="codigo-pago"></p>
+        <p id="cuenta-banco"></p>
+    </div>
+</section>
+<section id="registro-vendedor">
+    <h2>Registro de Vendedor</h2>
+    <form id="form-registro" enctype="multipart/form-data">
+        <label for="nombre">Nombre del Vendedor:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="descripcion">Descripción del Vendedor:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+        <label for="foto">Foto del Vendedor:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+
+        <label for="video">Video de Presentación:</label>
+        <input type="file" id="video" name="video" accept="video/*" required>
+
+        <button type="submit">Registrar Vendedor</button>
+    </form>
+</section>
+

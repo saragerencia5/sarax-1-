@@ -1,0 +1,644 @@
+/* Reset para evitar estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #FF6F61; /* Rojo sensacional */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Estilos para los vendedores */
+.vendedores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.vendedor {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.vendedor h3 {
+    color: #FF6F61;
+}
+
+.vendedor img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.vendedor p {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.vendedor button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vendedor button:hover {
+    background-color: #D15A4A; /* Rojo más oscuro para hover */
+}
+
+/* Estilos de la ventana de chat */
+.chat-window {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 10;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.chat-input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D15A4A; /* Rojo más oscuro para hover */
+}
+/* Reset para evitar estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #FF6F61; /* Rojo sensacional */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Estilos para los vendedores */
+.vendedores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.vendedor {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.vendedor h3 {
+    color: #FF6F61;
+}
+
+.vendedor img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.vendedor button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vendedor button:hover {
+    background-color: #D15A4A; /* Rojo más oscuro para hover */
+}
+
+/* Estilos de la ventana de chat */
+.chat-window {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 10;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.chat-input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D15A4A; /* Rojo más oscuro para hover */
+}
+/* Reset para evitar estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #FF6F61; /* Rojo sensacional */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Estilos para los vendedores */
+.vendedores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.vendedor {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.vendedor h3 {
+    color: #FF6F61;
+}
+
+.vendedor img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.vendedor button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vendedor button:hover {
+    background-color: #D15A4A; /* Rojo más oscuro para hover */
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1em;
+    color: #666;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    background-color: #c0392b; /* Rojo intenso */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#bienvenida {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #e74c3c; /* Rojo más claro */
+}
+
+#bienvenida h1 {
+    font-size: 36px;
+}
+
+#catalogo {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+#catalogo h2 {
+    font-size: 28px;
+}
+
+.vendedores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.vendedor {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.vendedor h3 {
+    font-size: 24px;
+    color: #f39c12; /* Dorado */
+}
+
+button {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+}
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}#registro-vendedor {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#registro-vendedor h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#form-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#form-registro label {
+    font-size: 18px;
+}
+
+#form-registro input, #form-registro textarea {
+    padding: 10px;
+    width: 300px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#form-registro button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#form-registro button:hover {
+    background-color: #c0392b;
+}
+
+#pago {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#pago h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#form-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#form-pago label {
+    font-size: 18px;
+}
+
+#form-pago input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#form-pago button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#form-pago button:hover {
+    background-color: #c0392b;
+}
+
+#detalles-pago p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+#panel-admin {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#panel-admin h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#panel-admin ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#panel-admin ul li {
+    margin: 10px 0;
+}
+#solicitud-pago {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#solicitud-pago h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#form-solicitud {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#form-solicitud input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#form-solicitud button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#form-solicitud button:hover {
+    background-color: #c0392b;
+}body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff7f50; /* Color llamativo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
+
+#chatWindow, #videollamada {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+textarea.chat-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
